@@ -1,0 +1,23 @@
+/* Reuse the signup styles to keep visual parity */
+@import url("../signup/signup.css");
+
+/* Login-specific small tweaks */
+.meta-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 8px;
+}
+
+.remember {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.link {
+    text-decoration: none;
+    color: #5b4df2;
+}

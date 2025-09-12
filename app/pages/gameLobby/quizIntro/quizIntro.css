@@ -1,0 +1,60 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 50
+}
+
+.modal {
+    width: 100%;
+    max-width: 680px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .2);
+    padding: 36px;
+    text-align: center
+}
+
+.close-btn {
+    position: absolute;
+    right: 14px;
+    top: 10px;
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+    color: #6b7280
+}
+
+/* Ensure the absolute close button is positioned relative to the card */
+.modal {
+    position: relative
+}
+
+.close-btn:hover {
+    color: #4f46e5
+}
+
+.modal-title {
+    margin: 0 0 8px;
+    color: #4f46e5
+}
+
+.modal-sub {
+    color: #6b7280;
+    margin-bottom: 16px
+}
+
+.primary-btn {
+    background: #6d5efc;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 16px;
+    cursor: pointer
+}

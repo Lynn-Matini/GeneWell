@@ -1,0 +1,184 @@
+.settings-root {
+    min-height: 100vh;
+    background: #fff;
+    color: #111827
+}
+
+.settings-top {
+    height: 56px;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: #fafafa
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.logo {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background: #5b6cf2
+}
+
+.brand-name {
+    font-weight: 700
+}
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.logout {
+    background: #eef2ff;
+    border: 1px solid #dbe3ff;
+    border-radius: 999px;
+    padding: 6px 12px;
+    color: #1f2547;
+    cursor: pointer
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%
+}
+
+.settings-main {
+    max-width: 980px;
+    margin: 30px auto;
+    padding: 0 20px
+}
+
+.title {
+    margin: 0 0 16px
+}
+
+.card {
+    border-top: 1px solid #e5e7eb;
+    padding: 16px 0
+}
+
+.section-title {
+    margin: 0 0 12px
+}
+
+.field {
+    display: grid;
+    gap: 6px;
+    margin-bottom: 12px
+}
+
+.label {
+    color: #6b7280;
+    font-size: 14px
+}
+
+input[type="text"] {
+    height: 40px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 0 10px;
+    background: #f8fafc
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0
+}
+
+.row+.row {
+    border-top: 1px solid #f1f2f6
+}
+
+.row-title {
+    font-weight: 600
+}
+
+.row-sub {
+    color: #6b7280;
+    font-size: 14px
+}
+
+.row.link {
+    width: 100%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: left
+}
+
+.row.link .chev {
+    color: #9aa3af
+}
+
+.row.link.danger .row-title {
+    color: #b42318
+}
+
+.picture .avatar-lg img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%
+}
+
+.chevron {
+    width: 20px;
+    height: 20px;
+    border: none;
+    background: transparent;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px
+}
+
+.switch input {
+    display: none
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #ebeafd;
+    border: 1px solid #dbe3ff;
+    border-radius: 999px;
+    transition: .2s
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    transition: .2s
+}
+
+.switch input:checked+.slider {
+    background: #a99bff
+}
+
+.switch input:checked+.slider:before {
+    transform: translate(18px, -50%)
+}

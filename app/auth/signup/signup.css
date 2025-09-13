@@ -13,7 +13,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-    background: #e9effc;
+    background: #DDE6FF;
     padding: 28px 18px;
     display: flex;
     flex-direction: column;
@@ -54,8 +54,8 @@ body {
 }
 
 .sidebar-btn {
-    background: #eef2ff;
-    color: #1f2547;
+    background: #2E3A59;
+    color: #ffffff;
     padding: 12px 14px;
     border: 1px solid #dbe3ff;
     border-radius: 10px;
@@ -74,12 +74,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 24px 16px;
-    background:
-        radial-gradient(ellipse at 25% 0%, rgba(255, 255, 255, 0.06), transparent 60%),
-        radial-gradient(ellipse at 80% 100%, rgba(255, 255, 255, 0.06), transparent 60%),
-        repeating-linear-gradient(135deg, rgba(109, 94, 252, 0.22) 0 26px, transparent 26px 52px),
-        repeating-linear-gradient(135deg, transparent 0 24px, rgba(255, 255, 255, 0.06) 24px 48px);
+    background-image: url('../../../images/dna_light.jpg');
+    background-repeat: repeat;
+    background-size: 80px 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+
 }
 
 .signup-card {
@@ -87,7 +87,7 @@ body {
     max-width: 720px;
     background: #ffffff;
     border-radius: 14px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #E6E7F7;
     padding: 22px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -119,46 +119,41 @@ body {
 }
 
 .label {
-    color: #374151;
-    font-size: 13px;
+    color: #0F1724;
+    font-size: 14px;
+    font-weight: 600;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="password"] {
-    width: 100%;
+input[type="text"] {
+    width: 92%;
     height: 42px;
     padding: 0 12px;
-    border: 1px solid #e5e7eb;
+    border: 1px solid #E6E9F7;
     border-radius: 10px;
-    background: #f8fafc;
     outline: none;
+    color: #98A0B4;
+    transition: box-shadow 0.2s, border-color 0.2s, background 0.2s
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 96%;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #E6E9F7;
+    border-radius: 10px;
+    outline: none;
+    color: #98A0B4;
     transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
 }
 
+/* Ask Color to change during */
 input:focus {
     border-color: #6d5efc;
     box-shadow: 0 0 0 4px rgba(109, 94, 252, 0.35);
     background: #fff;
 }
 
-.avatars {
-    margin-top: 14px;
-}
-
-.choices {
-    display: flex;
-    gap: 12px;
-    margin-top: 8px;
-}
-
-.choices img {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    background: #f1f5f9;
-}
 
 .checkbox {
     font-size: 14px;
@@ -173,7 +168,7 @@ input:focus {
 
 .primary-btn {
     margin-top: 12px;
-    background: #6d5efc;
+    background: #6C5CE7;
     color: white;
     border: none;
     padding: 12px;
@@ -200,14 +195,15 @@ input:focus {
 }
 
 .secondary-btn {
-    background: #eef2ff;
+    background: #DDE6FF;
     border: 1px solid #dbe3ff;
     padding: 12px;
     border-radius: 12px;
     width: 100%;
     cursor: pointer;
-    color: #1f2547;
+    color: #122033;
     display: inline-flex;
+    font-weight: 545;
     align-items: center;
     justify-content: center;
     gap: 8px;
@@ -218,13 +214,15 @@ input:focus {
 }
 
 .signin-text {
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 10px;
-    color: #6b7280;
+    color: #98A0B4;
 }
 
 .signin-text a {
-    color: #5b4df2;
+    color: #6C5CE7;
     text-decoration: none;
 }
 

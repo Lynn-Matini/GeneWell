@@ -52,19 +52,10 @@ function Page() {
                         <label className="field">
                             <span className="label">Password</span>
                             <input type="password" placeholder="•••••••" />
+                            <br />
                         </label>
 
-                        {/* Avatar selection */}
-                        <div className="avatars">
-                            <span className="label">Choose avatar</span>
-                            <div className="choices">
-                                <img src="https://i.pravatar.cc/40?img=1" alt="avatar1" />
-                                <img src="https://i.pravatar.cc/40?img=2" alt="avatar2" />
-                                <img src="https://i.pravatar.cc/40?img=3" alt="avatar3" />
-                                <img src="https://i.pravatar.cc/40?img=4" alt="avatar4" />
-                            </div>
-                        </div>
-
+                        
                         <label className="checkbox">
                             <input type="checkbox" defaultChecked /> I agree to the <a href="#">Terms</a> and <a href="#">Privacy</a>
                         </label>
@@ -73,7 +64,7 @@ function Page() {
                             <span className="btn-icon">👤</span> Create account
                         </button>
 
-                        <div className="divider"><span>or</span></div>
+                        <div className="divider"><span>—————————————— or ——————————————</span></div>
 
                         <button className="secondary-btn">
                             <span className="btn-icon">✉️</span> Continue with Email

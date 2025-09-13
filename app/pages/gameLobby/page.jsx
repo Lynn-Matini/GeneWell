@@ -16,7 +16,7 @@ function Page() {
           </div>
           <nav className="links">
             <a className="link" href="/pages/dashboard">Home </a>
-            <a className="link active" href="/pages/gameLobby">Games</a>
+            <a className="link" href="/pages/gameLobby">Games</a>
             <a className="link" href="/pages/settings">Settings</a>
           </nav>
         </div>
@@ -50,7 +50,7 @@ function Page() {
               <p className="muted">Test your knowledge about Rhesus factor and its implications.</p>
               <button className="play" onClick={() => router.push("/pages/gameLobby/quizIntro?title=Rhesus%20Factor%20Quiz")}>Play</button>
             </div>
-            <div className="thumb thumb-red">Rhesus Factor</div>
+            <div className="thumb thumb-red"></div>
           </article>
 
           <article className="game">
@@ -59,7 +59,7 @@ function Page() {
               <p className="muted">Identify different blood groups and their compatibility.</p>
               <button className="play" onClick={() => router.push("/pages/gameLobby/quizIntro?title=Blood%20Group%20Challenge")}>Play</button>
             </div>
-            <div className="thumb thumb-amber">Blood Groups</div>
+            <div className="thumb thumb-amber"></div>
           </article>
 
           <article className="game">
@@ -68,7 +68,7 @@ function Page() {
               <p className="muted">General health knowledge quiz covering various topics.</p>
               <button className="play" onClick={() => router.push("/pages/gameLobby/quizIntro?title=Health%20Trivia")}>Play</button>
             </div>
-            <div className="thumb thumb-green">General Health</div>
+            <div className="thumb thumb-green"></div>
           </article>
         </div>
       </main>

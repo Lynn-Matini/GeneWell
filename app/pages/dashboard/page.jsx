@@ -22,6 +22,7 @@ function Page() {
         <div className="profile">
           <img src="https://i.pravatar.cc/40?img=8" alt="avatar" />
           <div>
+            <div className="profile-divider"></div>
             <div className="name">Alex Morgan</div>
             <div className="role">Player</div>
           </div>
@@ -30,20 +31,31 @@ function Page() {
 
       <main className="dash-main">
         <header className="topbar">
-          <div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
             <h1>Dashboard</h1>
             <p className="muted">Track your progress on Rhesus factor and Blood groups</p>
           </div>
           <div className="top-actions">
             <button className="chip" onClick={() => router.push("/pages/gameLobby")}>▶ Play in Lobby</button>
-            <button className="chip metric">💜 750 HP</button>
-            <button className="chip metric">🔥 7 Days</button>
             <button className="chip ghost">↩ Log Out</button>
           </div>
         </header>
 
+        <div className="divider"></div>
+
+        <section className="welcome-section">
+          <div className="welcome-content">
+            <h2 className="welcome-title">Welcome back, Player!</h2>
+            <p className="welcome-subtitle">Continue your journey to master blood types & Rhesus factors</p>
+          </div>
+          <div className="metrics-row">
+            <button className="chip metric hp">🧡 750 HP</button>
+            <button className="chip metric days">🔥 7 Days</button>
+          </div>
+        </section>
+
         <section className="cards">
-          <div className="card progress">
+          <div className="card proowgress">
             <div className="card-title">Knowledge Progress</div>
             <div className="legend">
               <span className="dot green"></span> Rhesus Factor

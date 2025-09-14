@@ -9,9 +9,16 @@ function Page() {
     return (
         <div className="settings-root">
             <header className="settings-top">
-                <div className="brand">
-                    <div className="logo" />
-                    <span className="brand-name">GeneWell</span>
+                <div className="left">
+                    <div className="brand">
+                        <div className="logo" />
+                        <span className="brand-name">GeneWell</span>
+                    </div>
+                    <nav className="links">
+                        <a className="link" href="/pages/dashboard">Home </a>
+                        <a className="link" href="/pages/gameLobby">Games</a>
+                        <a className="link" href="/pages/settings">Settings</a>
+                    </nav>
                 </div>
                 <div className="right">
                     <button className="logout">↪ Log Out</button>
@@ -29,7 +36,7 @@ function Page() {
                         <input type="text" placeholder="" />
                     </label>
 
-                    <div className="row picture">
+                    <div className="profileimg">
                         <div className="avatar-lg">
                             <img src="https://i.pravatar.cc/64?img=32" alt="Profile" />
                         </div>

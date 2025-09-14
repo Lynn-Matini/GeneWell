@@ -184,16 +184,19 @@
 
 .thumb-red {
     background-image: url('../../../images/rhesus.svg');
-    background-size: 50%;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
+    /* border-radius: 70px; */
 }
 
+/* Image needs to be worked on again*/
 .thumb-amber {
     background-image: url('../../../images/blood.svg');
     background-size: 120%;
     background-position: center;
     background-repeat: no-repeat;
+    /* border-radius: 25%; */
 }
 
 .thumb-green {

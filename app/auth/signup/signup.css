@@ -1,8 +1,63 @@
 body {
     margin: 0;
     font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    background: #0f0f12;
-    /* right side base color */
+    background: var(--bg-body);
+    color: var(--text-primary);
+    transition: background 0.3s, color 0.3s;
+}
+
+:root {
+    /* Light mode variables */
+    --bg-body: #0f0f12;
+    --bg-sidebar: #DDE6FF;
+    --bg-card: #ffffff;
+    --text-primary: #1a1f2e;
+    --text-secondary: #475569;
+    --text-muted: #6b7280;
+    --text-input: #98A0B4;
+    --placeholder-color: #98A0B4; 
+    --border-color: #E6E7F7;
+    --primary-color: #6C5CE7;
+    --secondary-bg: #DDE6FF;
+    --sidebar-btn: #2E3A59;
+    --text-sidebar-btn:#FFFFFF;
+    --label-color: #0F1724;
+    --input-bg: #ffffff;
+    --input-border: #E6E9F7;
+    --checkbox-color: #475569;
+    --link-color: #5b4df2;
+    --divider-color: #9aa3af;
+    --subhead-color: #2E3A59; 
+    --create-acc-btn:#6C5CE7;
+    --email-btn:#DDE6FF;
+    --email-btn-text:#122033;
+}
+
+/* Dark mode variables */
+[data-theme="dark"] {
+    --bg-body: #171221;
+    --bg-sidebar: #231B31;
+    --bg-card: #171221;
+    --text-primary: #ffffff;
+    --text-secondary: #c0c7d4;
+    --text-muted: #a0aec0;
+    --text-input: #c0c7d4;
+    --placeholder-color: #B7C0D5; 
+    --border-color: #E6E9F7;
+    --primary-color: #6C5CE7;
+    --secondary-bg: #2E2447;
+    --sidebar-btn: #2E3A59;
+    --text-sidebar-btn:#FFFFFF;
+    --label-color: #e2e8f0;
+    --input-bg: #2E2447;
+    --input-border: #2E3A59;
+    --checkbox-color: #c0c7d4;
+    --link-color: #6C5CE7;
+    --divider-color: #718096;
+    --subhead-color: #FFFFFF;
+    --create-acc-btn:#7847EB;
+    --email-btn:#2E2447;
+    --email-btn-text:#FFFFFF;
 }
 
 .signup-container {
@@ -13,12 +68,12 @@ body {
 
 /* Sidebar */
 .sidebar {
-    background: #DDE6FF;
+    background: var(--bg-sidebar);
     padding: 28px 18px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    color: #1a1f2e;
+    color: var(--text-primary);
 }
 
 .brand {
@@ -48,16 +103,16 @@ body {
 }
 
 .subhead {
-    color: #475569;
+    color: var(--subhead-color); 
     font-size: 14px;
     line-height: 1.5;
 }
 
 .sidebar-btn {
-    background: #2E3A59;
-    color: #ffffff;
+    background: var(--sidebar-btn);
+    color: var(--text-sidebar-btn);
     padding: 12px 14px;
-    border: 1px solid #dbe3ff;
+    border: 1px solid var(--border-color);
     border-radius: 10px;
     text-align: left;
     cursor: pointer;
@@ -74,20 +129,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('../../../images/dna_light.jpg');
+    background-image: var(--bg-pattern);
     background-repeat: repeat;
     background-size: 80px 80px;
     background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: overlay;
+}
 
+[data-theme="light"] .form-section {
+    --bg-pattern: url('../../../images/dna_light.jpg');
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+[data-theme="dark"] .form-section {
+    --bg-pattern: url('../../../images/dna_dark.png');
+    background-color: rgba(0, 0, 0, 0.75); 
 }
 
 .signup-card {
     width: 100%;
     max-width: 720px;
-    background: #ffffff;
+    background: var(--bg-card);
     border-radius: 14px;
-    border: 1px solid #E6E7F7;
+    border: 1px solid var(--border-color);
     padding: 22px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }
@@ -95,10 +159,11 @@ body {
 .card-header h3 {
     margin: 0 0 6px;
     font-size: 22px;
+    color: var(--text-primary);
 }
 
 .muted {
-    color: #6b7280;
+    color: var(--text-muted);
     font-size: 14px;
 }
 
@@ -119,7 +184,7 @@ body {
 }
 
 .label {
-    color: #0F1724;
+    color: var(--label-color);
     font-size: 14px;
     font-weight: 600;
 }
@@ -128,10 +193,11 @@ input[type="text"] {
     width: 92%;
     height: 42px;
     padding: 0 12px;
-    border: 1px solid #E6E9F7;
+    border: 1px solid var(--input-border);
     border-radius: 10px;
     outline: none;
-    color: #98A0B4;
+    color: var(--text-input);
+    background: var(--input-bg);
     transition: box-shadow 0.2s, border-color 0.2s, background 0.2s
 }
 
@@ -140,35 +206,35 @@ input[type="password"] {
     width: 96%;
     height: 42px;
     padding: 0 12px;
-    border: 1px solid #E6E9F7;
+    border: 1px solid var(--input-border);
     border-radius: 10px;
     outline: none;
-    color: #98A0B4;
+    color: var(--text-input);
+    background: var(--input-bg);
     transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
 }
 
 /* Ask Color to change during */
 input:focus {
-    border-color: #6d5efc;
+    border-color: var(--primary-color);
     box-shadow: 0 0 0 4px rgba(109, 94, 252, 0.35);
-    background: #fff;
+    background: var(--input-bg);
 }
-
 
 .checkbox {
     font-size: 14px;
     margin: 10px 0;
-    color: #475569;
+    color: var(--checkbox-color);
 }
 
 .checkbox a {
-    color: #5b4df2;
+    color: var(--link-color);
     text-decoration: none;
 }
 
 .primary-btn {
     margin-top: 12px;
-    background: #6C5CE7;
+    background: var(--create-acc-btn);
     color: white;
     border: none;
     padding: 12px;
@@ -189,19 +255,19 @@ input:focus {
 .divider {
     display: grid;
     place-items: center;
-    color: #9aa3af;
+    color: var(--divider-color);
     font-size: 13px;
     margin: 12px 0;
 }
 
 .secondary-btn {
-    background: #DDE6FF;
-    border: 1px solid #dbe3ff;
+    background: var(--email-btn);
+    border: none;
     padding: 12px;
     border-radius: 12px;
     width: 100%;
     cursor: pointer;
-    color: #122033;
+    color: var(--email-btn-text);
     display: inline-flex;
     font-weight: 545;
     align-items: center;
@@ -218,12 +284,82 @@ input:focus {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    color: #98A0B4;
+    color: var(--text-input);
 }
 
 .signin-text a {
-    color: #6C5CE7;
+    color: var(--primary-color);
     text-decoration: none;
+}
+
+/* Theme toggle switch */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Removed theme-toggle-label class as we're using icons instead */
+
+.theme-icon {
+    color: var(--text-primary);
+    font-size: 18px;
+    margin-right: 5px;
+}
+
+.theme-toggle-label {
+    color: var(--text-primary);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #F2F0F5;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    transition: .2s;
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #3C2B66;
+    opacity: 80%;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    transition: .2s;
+}
+
+.switch input:checked + .slider {
+    background: #9372E6;
+    opacity: 60%;
+}
+
+.switch input:checked + .slider:before {
+    transform: translate(18px, -50%);
 }
 
 /* Responsive */
@@ -235,4 +371,28 @@ input:focus {
     .sidebar {
         display: none;
     }
+    
+    .theme-toggle {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Placeholder styling */
+input::placeholder {
+    color: var(--placeholder-color);
+    opacity: 1; /* Firefox applies opacity by default */
+}
+
+/* For older browsers */
+input::-webkit-input-placeholder {
+    color: var(--placeholder-color);
+}
+
+input::-moz-placeholder {
+    color: var(--placeholder-color);
+}
+
+input:-ms-input-placeholder {
+    color: var(--placeholder-color);
 }

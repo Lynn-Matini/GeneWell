@@ -1,10 +1,24 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import "./dashboard.css";
 
 function Page() {
   const router = useRouter();
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Apply theme when component mounts and when darkMode changes
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      darkMode ? "dark" : "light"
+    );
+  }, [darkMode]);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div className="dash-root">
       <aside className="dash-sidebar">
@@ -14,15 +28,20 @@ function Page() {
         </div>
 
         <nav className="nav">
-          <a className="nav-item active" href="/pages/dashboard">Dashboard</a>
-          <a className="nav-item" href="/pages/gameLobby">Game Lobby</a>
-          <a className="nav-item" href="/pages/settings">Settings</a>
+          <a className="nav-item active" href="/pages/dashboard">
+            Dashboard
+          </a>
+          <a className="nav-item" href="/pages/gameLobby">
+            Game Lobby
+          </a>
+          <a className="nav-item" href="/pages/settings">
+            Settings
+          </a>
         </nav>
 
         <div className="profile">
           <img src="https://i.pravatar.cc/40?img=8" alt="avatar" />
           <div>
-            <div className="profile-divider"></div>
             <div className="name">Alex Morgan</div>
             <div className="role">Player</div>
           </div>
@@ -31,12 +50,31 @@ function Page() {
 
       <main className="dash-main">
         <header className="topbar">
-          <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "20px" }}>
             <h1>Dashboard</h1>
-            <p className="muted">Track your progress on Rhesus factor and Blood groups</p>
+            <p className="muted">
+              Track your progress on Rhesus factor and Blood groups
+            </p>
           </div>
           <div className="top-actions">
-            <button className="chip" onClick={() => router.push("/pages/gameLobby")}>▶ Play in Lobby</button>
+            {/* Theme Toggle with icons */}
+            <div className="theme-toggle">
+              <span className="theme-icon">{darkMode ? "🌙" : "☀️"}</span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={darkMode}
+                  onChange={toggleTheme}
+                />
+                <span className="slider"></span>
+              </label>
+            </div>
+            <button
+              className="chip"
+              onClick={() => router.push("/pages/gameLobby")}
+            >
+              ▶ Play in Lobby
+            </button>
             <button className="chip ghost">↩ Log Out</button>
           </div>
         </header>
@@ -46,7 +84,9 @@ function Page() {
         <section className="welcome-section">
           <div className="welcome-content">
             <h2 className="welcome-title">Welcome back, Player!</h2>
-            <p className="welcome-subtitle">Continue your journey to master blood types & Rhesus factors</p>
+            <p className="welcome-subtitle">
+              Continue your journey to master blood types & Rhesus factors
+            </p>
           </div>
           <div className="metrics-row">
             <button className="chip metric hp">🧡 750 HP</button>
@@ -59,7 +99,11 @@ function Page() {
             <div className="card-title">Knowledge Progress</div>
             <div className="legend">
               <span className="dot green"></span> Rhesus Factor
-              <span className="dot orange" style={{ marginLeft: 16 }}></span> Blood Groups
+              <span
+                className="dot orange"
+                style={{ marginLeft: 16 }}
+              ></span>{" "}
+              Blood Groups
             </div>
 
             <div className="metric">
@@ -107,17 +151,20 @@ function Page() {
                 <span className="score">3,400</span>
               </li>
             </ol>
-            <p className="muted small">You're climbing fast! Play more rounds to reach #1.</p>
+            <p className="muted small">
+              You're climbing fast! Play more rounds to reach #1.
+            </p>
           </div>
         </section>
 
         <section className="fact">
           <div className="fact-title">💡Quick Health Facts</div>
           <p>
-            The Rhesus (Rh) factor is an inherited protein found on the surface of red blood cells.
-            If your blood has the protein, you're Rh positive. If your blood lacks the protein,
-            you're Rh negative. Rh factor can cause complications during pregnancy if the mother is
-            Rh negative and the baby is Rh positive.
+            The Rhesus (Rh) factor is an inherited protein found on the surface
+            of red blood cells. If your blood has the protein, you're Rh
+            positive. If your blood lacks the protein, you're Rh negative. Rh
+            factor can cause complications during pregnancy if the mother is Rh
+            negative and the baby is Rh positive.
           </p>
         </section>
       </main>

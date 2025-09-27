@@ -1,10 +1,33 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./login.css";
 
 function Page() {
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Apply theme when component mounts and when darkMode changes
+  useEffect(() => {
+    document.documentElement.setAttribute(
+      "data-theme",
+      darkMode ? "dark" : "light"
+    );
+  }, [darkMode]);
+
+  const toggleTheme = () => {
+    setDarkMode(!darkMode);
+  };
+
   return (
     <div className="signup-container">
+      {/* Theme Toggle with icons */}
+      <div className="theme-toggle">
+        <span className="theme-icon">{darkMode ? "🌙" : "☀️"}</span>
+        <label className="switch">
+          <input type="checkbox" checked={darkMode} onChange={toggleTheme} />
+          <span className="slider"></span>
+        </label>
+      </div>
+      
       <aside className="sidebar">
         <div className="brand">
           <div className="logo">G</div>
